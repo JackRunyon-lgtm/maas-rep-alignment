@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaaS Rep Alignment - June 2026</title>
+    <link rel="stylesheet" href="maas-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MaaS Rep Alignment Dashboard</h1>
+            <p class="subtitle">June 2026 - 1,836 Records</p>
+        </header>
+
+        <div class="controls-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Search across all fields...">
+            </div>
+
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="marketNameFilter">Market Name</label>
+                    <select id="marketNameFilter">
+                        <option value="">Select Market Name</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="coverageClientTypeFilter">Coverage Client Type</label>
+                    <select id="coverageClientTypeFilter">
+                        <option value="">Select Coverage Client Type</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="coverageClientSubtypeFilter">Coverage Client Subtype</label>
+                    <select id="coverageClientSubtypeFilter">
+                        <option value="">Select Coverage Client Subtype</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="coverageNameFilter">Coverage Name</label>
+                    <select id="coverageNameFilter">
+                        <option value="">Select Coverage Name</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="coverageIdFilter">Coverage ID</label>
+                    <select id="coverageIdFilter">
+                        <option value="">Select Coverage ID</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="repFilter">Rep</label>
+                    <select id="repFilter">
+                        <option value="">Select Rep</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="techRepFilter">Tech Rep</label>
+                    <select id="techRepFilter">
+                        <option value="">Select Tech Rep</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="managerFilter">Manager</label>
+                    <select id="managerFilter">
+                        <option value="">Select Manager</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="techManagerFilter">Tech Manager</label>
+                    <select id="techManagerFilter">
+                        <option value="">Select Tech Manager</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="clearFilters" class="btn-secondary">Clear All Filters</button>
+                <button id="exportBtn" class="btn-primary">Export Results</button>
+            </div>
+
+            <div class="results-info">
+                <span id="resultsCount">Select a filter or search to view data</span>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th data-sort="GEOGRAPHY_NAME">Geography ↕</th>
+                        <th data-sort="MARKET_NAME">Market ↕</th>
+                        <th data-sort="SUB_MARKET_NAME">Sub Market ↕</th>
+                        <th data-sort="SALES_GROUP_NAME">Sales Group ↕</th>
+                        <th data-sort="COVE_CLIENT_TYPE_DESC">Client Type ↕</th>
+                        <th data-sort="BRANCH_NAME">Branch ↕</th>
+                        <th data-sort="BRANCH_UNIT_NAME">Branch Unit ↕</th>
+                        <th data-sort="COVERAGE_NAME">Coverage ↕</th>
+                        <th data-sort="Rep">Rep ↕</th>
+                        <th data-sort="Role">Role ↕</th>
+                        <th data-sort="Rep Email">Rep Email ↕</th>
+                        <th data-sort="Tech Rep">Tech Rep ↕</th>
+                        <th data-sort="Tech Rep Email">Tech Rep Email ↕</th>
+                        <th data-sort="Manager">Manager ↕</th>
+                        <th data-sort="Manager Email">Manager Email ↕</th>
+                        <th data-sort="Tech Manager">Tech Manager ↕</th>
+                        <th data-sort="Tech Manager Email">Tech Manager Email ↕</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button id="prevPage" class="btn-secondary">← Previous</button>
+            <span id="pageInfo">Page 1 of 1</span>
+            <button id="nextPage" class="btn-secondary">Next →</button>
+        </div>
+    </div>
+
+    <script src="maas-script.js"></script>
+</body>
+</html>
