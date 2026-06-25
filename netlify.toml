@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node convert.js"
+  command = "npm install xlsx && node convert.js"
 
 [build.environment]
   NODE_VERSION = "20"
